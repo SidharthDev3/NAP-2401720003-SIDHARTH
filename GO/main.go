@@ -1,8 +1,7 @@
 package main
 
-import "newageprogramming/arrays"
+import "newageprogramming/utility/maps"
 
 func main() {
-	arrays.Array()
-
+	maps.Map()
 }
