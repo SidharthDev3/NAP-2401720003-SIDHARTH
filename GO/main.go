@@ -1,7 +1,7 @@
 package main
 
-import "newageprogramming/utility/maps"
+import "newageprogramming/utility/arrays"
 
 func main() {
-	maps.Map()
+	arrays.DynamicLists()
 }

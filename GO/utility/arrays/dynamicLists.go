@@ -3,14 +3,16 @@ package arrays
 import "fmt"
 
 func DynamicLists() {
-	s := []int{10, 20}
-	s = append(s, 30)
+	s := []int{80, 87, 92}
 
-	fmt.Println(s)
+	sum := 0
 
-	fmt.Println(len(s))
+	for _, v := range s {
+		sum = sum + v
+	}
 
-	Nums2 := make([]int, 5, 10)
+	avg := sum / 3
 
-	fmt.Println(len(Nums2))
+	fmt.Println(avg)
+
 }
