@@ -14,6 +14,6 @@ func main() {
 	fmt.Print("Enter second integer: ")
 	fmt.Scan(&b)
 
-	sum := mathutil.Add(a, b)
+	sum := mathutil.AddQuestion(a, b)
 	fmt.Println(sum)
 }

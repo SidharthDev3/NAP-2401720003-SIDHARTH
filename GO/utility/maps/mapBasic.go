@@ -2,7 +2,7 @@ package maps
 
 import "fmt"
 
-func Map() {
+func MapBasic() {
 	fmt.Println("Created a Map")
 	subjects := map[string]int{}
 	subjects["Java"] = 90

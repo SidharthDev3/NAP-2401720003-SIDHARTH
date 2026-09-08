@@ -2,7 +2,7 @@ package arrays
 
 import "fmt"
 
-func Array() {
+func ArrayBasic() {
 	var marks [5]int
 
 	for i := 0; i < len(marks); i++ {
