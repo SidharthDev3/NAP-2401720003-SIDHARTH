@@ -1,8 +1,8 @@
-package hello
+package strings
 
 import "fmt"
 
-func Reverse(str string) {
+func ReverseQuestion(str string) {
 	rev := ""
 
 	for i := len(str) - 1; i >= 0; i-- {

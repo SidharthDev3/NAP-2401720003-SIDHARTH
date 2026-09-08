@@ -1,6 +1,6 @@
-package hello
+package strings
 
-func CountVowels(str string) int {
+func VowelsQuestion(str string) int {
 	count := 0
 	for _, char := range str {
 		switch char {

@@ -1,6 +1,6 @@
 package maths
 
-func Power(a, b int) int {
+func PowerQuestion(a, b int) int {
 	if a == 0 {
 		return 1
 	}
