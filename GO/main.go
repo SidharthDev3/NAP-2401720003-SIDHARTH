@@ -1,7 +1,7 @@
 package main
 
-import "newageprogramming/utility/maps"
+import "newageprogramming/utility/structs"
 
 func main() {
-	maps.Map()
+	structs.StructBasic()
 }
