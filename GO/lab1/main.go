@@ -1,19 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"task1/mathutil"
+	"task1/calculator"
 )
 
 func main() {
-	var a int
-	fmt.Print("Enter first integer: ")
-	fmt.Scan(&a)
+	calculator.CalculatorQuestion()
 
-	var b int
-	fmt.Print("Enter second integer: ")
-	fmt.Scan(&b)
-
-	sum := mathutil.AddQuestion(a, b)
-	fmt.Println(sum)
 }
