@@ -1,12 +1,15 @@
-package pointersaddress
+package pointers_address
 
 import "fmt"
 
 func PointersBasic() {
-	var a int = 10
-	p := &a
-	*p = 20
+	x := 10
+	var ptr *int = &x
 
-	fmt.Println(*p)
-	fmt.Println(p)
+	fmt.Println("Value of x:       ", x)
+	fmt.Println("Address of x (&x): ", &x)
+	fmt.Println("Value in ptr:      ", ptr)
+	fmt.Println("Dereferenced (*ptr):", *ptr)
+	*ptr = 25
+	fmt.Println("New value of x:   ", x)
 }
