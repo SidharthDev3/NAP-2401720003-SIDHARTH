@@ -1,5 +1,7 @@
 package main
 
+import pointersaddress "newageprogramming/utility/pointers_address"
+
 func main() {
-	structs
+	pointersaddress.PointersBasic()
 }
