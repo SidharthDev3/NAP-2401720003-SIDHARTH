@@ -1,4 +1,4 @@
-package maps
+package lab2
 
 import "fmt"
 

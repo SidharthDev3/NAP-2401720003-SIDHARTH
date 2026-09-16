@@ -1,4 +1,4 @@
-package maths
+package lab2
 
 func PowerQuestion(a, b int) int {
 	if a == 0 {

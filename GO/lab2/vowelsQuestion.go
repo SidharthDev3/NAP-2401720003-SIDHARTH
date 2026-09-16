@@ -1,4 +1,4 @@
-package strings
+package lab2
 
 func VowelsQuestion(str string) int {
 	count := 0

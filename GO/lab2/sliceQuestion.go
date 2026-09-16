@@ -1,4 +1,4 @@
-package slices
+package lab2
 
 import (
 	"fmt"

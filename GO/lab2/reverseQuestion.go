@@ -1,4 +1,4 @@
-package strings
+package lab2
 
 import "fmt"
 

@@ -1,4 +1,4 @@
-package maths
+package lab2
 
 func FactorialQuestion(a int) int {
 	if a == 0 {
