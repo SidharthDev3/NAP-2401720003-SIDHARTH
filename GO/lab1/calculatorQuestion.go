@@ -1,4 +1,4 @@
-package calculator
+package lab1
 
 import "fmt"
 
