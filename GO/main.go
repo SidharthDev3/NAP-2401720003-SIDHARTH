@@ -1,7 +1,9 @@
 package main
 
-import pointersaddress "newageprogramming/utility/pointers_address"
+import (
+	"newageprogramming/utility/concurrency"
+)
 
 func main() {
-	pointersaddress.PointersStudent()
+	concurrency.ConcurrentBasic()
 }
