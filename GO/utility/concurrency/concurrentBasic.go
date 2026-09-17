@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func count(msg string) {
+func print(msg string) {
 	for i := 0; i < 5; i++ {
 		fmt.Println(i, msg)
 		time.Sleep(time.Millisecond * 500)
@@ -22,7 +22,7 @@ func count(msg string) {
 // wg.wait()
 
 func ConcurrentBasic() {
-	go count("Sidharth") //Concurrent
-	go count("Hello")    //Concurrent
-	count("Hi")          //main
+	go print("Sidharth") //Concurrent
+	go print("Hello")    //Concurrent
+	print("Hi")          //main
 }
