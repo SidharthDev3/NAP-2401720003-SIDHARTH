@@ -13,14 +13,6 @@ func print(msg string) {
 	}
 }
 
-// var wg sync.WaitGroup
-// wg.Add(1)
-// go func(){
-// 	defer wg.Done()
-// 	work()
-// }()
-// wg.wait()
-
 func ConcurrentBasic() {
 	go print("Sidharth") //Concurrent
 	go print("Hello")    //Concurrent

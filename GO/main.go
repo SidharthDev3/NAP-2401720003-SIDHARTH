@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	concurrency.ConcurrentBasic()
+	concurrency.ConcurrentSync()
 }
