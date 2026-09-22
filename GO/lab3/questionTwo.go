@@ -12,10 +12,6 @@ func PointersModify(ptr *int) {
 	*ptr = 100
 }
 
-func bonus(s *Student, graceMarks float32) {
-	s.Marks = s.Marks + graceMarks
-}
-
 func QuestionPointers() {
 	x := 10
 	var ptr *int = &x
