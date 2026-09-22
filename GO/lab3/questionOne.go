@@ -1,4 +1,4 @@
-package main
+package lab3
 
 import (
 	"bufio"
