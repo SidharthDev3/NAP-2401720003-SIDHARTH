@@ -16,19 +16,21 @@ func QuestionPointers() {
 	x := 10
 	var ptr *int = &x
 
-	fmt.Println("Value of x:       ", x)      //Prints Value
-	fmt.Println("Address of x (&x): ", &x)    //Prints Address
-	fmt.Println("Value in ptr:      ", ptr)   //Prints Address
-	fmt.Println("Dereferenced (*ptr):", *ptr) //Prints Value
+	fmt.Printf("Value of x: %v \n", x)             //Prints Value
+	fmt.Printf("Address of x (&x): %v \n", &x)     //Prints Address
+	fmt.Printf("Value in ptr: %v \n", ptr)         //Prints Address
+	fmt.Printf("Dereferenced (*ptr): %v \n", *ptr) //Prints Value
 
 	num := 10
-	fmt.Println("Before Modifying: ", num)
+	fmt.Printf("Before Modifying: %v \n", num)
 	PointersModify(&num)
-	fmt.Println("After Modifying: ", num)
+	fmt.Printf("After Modifying: %v \n", num)
 
 	s1 := new(Student)
-	fmt.Println("Struct before Modifying: ", *s1)
+	fmt.Printf("Struct before Modifying: %v \n", *s1)
 	s1.Name = "Sidharth"
-	fmt.Println("Struct after Modifying: ", *s1)
+	s1.Age = 20
+	s1.Marks = 90
+	fmt.Printf("Struct after Modifying: %v \n", *s1)
 
 }
