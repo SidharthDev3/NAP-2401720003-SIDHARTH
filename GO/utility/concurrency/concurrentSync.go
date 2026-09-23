@@ -19,15 +19,16 @@ func ConcurrentSync() {
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		printMessage("Goroutine 1")
+		printMessage("Sidharth")
 	}()
 
+	wg.Add(1)
 	go func() {
 		defer wg.Done()
-		printMessage("Goroutine 2")
+		printMessage("George")
 	}()
 
-	printMessage("Hi!!")
+	printMessage("Tom")
 
 	wg.Wait()
 }

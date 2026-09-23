@@ -1,9 +1,9 @@
 package main
 
 import (
-	"newageprogramming/lab3"
+	"newageprogramming/utility/concurrency"
 )
 
 func main() {
-	lab3.QuestionPointers()
+	concurrency.ConcurrentSync()
 }
