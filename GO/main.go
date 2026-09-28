@@ -1,9 +1,9 @@
 package main
 
 import (
-	"newageprogramming/utility/concurrency"
+	"newageprogramming/utility/channels"
 )
 
 func main() {
-	concurrency.ConcurrentSync()
+	channels.ChannelsBuffered()
 }
