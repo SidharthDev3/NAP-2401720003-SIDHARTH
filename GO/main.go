@@ -1,9 +1,9 @@
 package main
 
 import (
-	"newageprogramming/utility/channels"
+	"newageprogramming/lab4"
 )
 
 func main() {
-	channels.ChannelsBuffered()
+	lab4.QuestionOne()
 }

@@ -7,7 +7,7 @@ import (
 
 func worker(id int, jobs <-chan int, results chan<- int) {
 	for job := range jobs {
-		fmt.Printf("Worker %d started Job %d", id, job)
+		fmt.Printf("Worker %d started Job %d \n", id, job)
 		time.Sleep(time.Millisecond * 500)
 		results <- job * 2
 	}
