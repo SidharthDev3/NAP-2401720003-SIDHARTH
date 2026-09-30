@@ -1,9 +1,9 @@
 package main
 
 import (
-	"newageprogramming/lab4"
+	errorhandling "newageprogramming/utility/errorHandling"
 )
 
 func main() {
-	lab4.QuestionOne()
+	errorhandling.ErrorHandlingBasic()
 }
