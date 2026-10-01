@@ -1,9 +1,9 @@
 package main
 
 import (
-	errorhandling "newageprogramming/utility/errorHandling"
+	"newageprogramming/utility/deferFunction"
 )
 
 func main() {
-	errorhandling.ErrorHandlingBasic()
+	deferFunction.DeferRecover()
 }
