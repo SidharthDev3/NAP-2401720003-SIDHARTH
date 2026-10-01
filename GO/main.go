@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	deferFunction.DeferRecover()
+	deferFunction.DeferBasic()
 }
