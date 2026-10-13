@@ -1,0 +1,6 @@
+let demo() = 
+    let a = 10
+    let a = 20
+    printfn "%d" a
+
+demo()
