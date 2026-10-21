@@ -1,9 +1,12 @@
-let name n = 
+let day n = 
     match n with
-    | 1 -> "one"
-    | 2 -> "two"
-    | 3 -> "three"
-    | 4 -> "four"
-    | _ -> "many"
+    | 1 -> "Monday"
+    | 2 -> "Tuesday"
+    | 3 -> "Wednesday"
+    | 4 -> "Thursday"
+    | 5 -> "Friday"
+    | 6 -> "Saturday"
+    | 7 -> "Sunday"
+    | _ -> "Input error"
 
-printfn "%s" (name 12)
+printfn "%s" (day 1)
