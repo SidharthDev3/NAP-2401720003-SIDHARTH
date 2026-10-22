@@ -17,8 +17,12 @@ let newNums = List.map double nums1
 
 
 // List Filter keep some based on a condition
-let filteredList = List.filter(fun x -> x % 2 = 0) nums1
+// let filteredList = List.filter(fun x -> x % 2 = 0) nums1
+let checkEven x = x % 2 = 0
+let filteredList = List.filter checkEven nums1
 
-printfn "%A" nums1
+printfn "%A" filteredList
 
-// List sum 
+// List Sum adds every element is the list and returns a value
+let sum = List.sum nums2
+printfn "%d" sum
