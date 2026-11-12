@@ -11,13 +11,28 @@
 ;; (println "Original List:" my-list)
 
 ;; Vector
-(def my-vector [10 20 30])
+;; (def my-vector [10 20 30])
+;; 
+;; (println "Original Vector:" my-vector)
+;; (println "Element at index 1:" (get my-vector 1))
+;; (println "Count:" (count my-vector))
+;; 
+;; (def new-vector (conj my-vector 40))
+;; 
+;; (println "New Vector:" new-vector)
+;; (println "Original Vector:" my-vector)
 
-(println "Original Vector:" my-vector)
-(println "Element at index 1:" (get my-vector 1))
-(println "Count:" (count my-vector))
+;; Map
+(def my-map {:name "Sid" :age 20})
 
-(def new-vector (conj my-vector 40))
+(println "Original Map:" my-map)
+(println "Name:" (get my-map :name))
 
-(println "New Vector:" new-vector)
-(println "Original Vector:" my-vector)
+(def new-map (assoc my-map :city "Delhi"))
+
+(println "New Map:" new-map)
+
+(def updated-map (dissoc new-map :age))
+
+(println "Updated Map:" updated-map)
+(println "Original Map:" my-map)
