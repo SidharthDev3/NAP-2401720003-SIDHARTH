@@ -23,16 +23,32 @@
 ;; (println "Original Vector:" my-vector)
 
 ;; Map
-(def my-map {:name "Sid" :age 20})
+;; (def my-map {:name "Sid" :age 20})
+;; 
+;; (println "Original Map:" my-map)
+;; (println "Name:" (get my-map :name))
+;; 
+;; (def new-map (assoc my-map :city "Delhi"))
+;; 
+;; (println "New Map:" new-map)
+;; 
+;; (def updated-map (dissoc new-map :age))
+;; 
+;; (println "Updated Map:" updated-map)
+;; (println "Original Map:" my-map)
 
-(println "Original Map:" my-map)
-(println "Name:" (get my-map :name))
+;; Set 
 
-(def new-map (assoc my-map :city "Delhi"))
+(def my-set #{10 20 30})
 
-(println "New Map:" new-map)
+(println "Original Set:" my-set)
+(println "Contains 20:" (contains? my-set 20))
 
-(def updated-map (dissoc new-map :age))
+(def new-set (conj my-set 40))
 
-(println "Updated Map:" updated-map)
-(println "Original Map:" my-map)
+(println "New Set:" new-set)
+
+(def updated-set (disj new-set 10))
+
+(println "Updated Set:" updated-set)
+(println "Original Set:" my-set)
