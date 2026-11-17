@@ -14,16 +14,16 @@ let names = students |> List.map (fun s -> s.Name)
 let toppers = students |> List.filter (fun s -> s.Marks >= 80)
 let result = toppers |> List.iter (fun s -> s.Name )
 
-printfn "%s" result
+printfn "%A" result
 
-let getResult marks =
-    match marks with
-    | m when m >= 80 -> "Distinction"
-    | m when m >= 60 -> "First Class"
-    | m when m >= 40 -> "Pass"
-    | _ -> "Fail"
+// let getResult marks =
+//     match marks with
+//     | m when m >= 80 -> "Distinction"
+//     | m when m >= 60 -> "First Class"
+//     | m when m >= 40 -> "Pass"
+//     | _ -> "Fail"
 
-printfn "\nStudent Results:"
-students |> List.iter (fun s ->
-    printfn "%s : %s" s.Name (getResult s.Marks)
-)
+// printfn "\nStudent Results:"
+// students |> List.iter (fun s ->
+//     printfn "%s : %s" s.Name (getResult s.Marks)
+// )
