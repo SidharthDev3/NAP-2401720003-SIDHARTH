@@ -1,9 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 type Inventory struct {
 	Id       int
@@ -12,14 +9,64 @@ type Inventory struct {
 	Price    float64
 }
 
-func itemCount(id int, jobs <-chan int, results chan<- int) {
-	for job := range jobs {
-		time.Sleep(time.Millisecond * 500)
-		results <- job + 0
+func addItem(obj []Inventory, a Inventory) []Inventory {
+
+	for _, v := range obj {
+		if v.Id == a.Id {
+			fmt.Println("Item already exists")
+			return obj
+		}
 	}
+
+	if a.Id <= 0 || a.Name == "" || a.Quantity < 0 || a.Price < 0 {
+		fmt.Println("Invalid item")
+		return obj
+	}
+
+	obj = append(obj, a)
+	return obj
+}
+
+func updateItem(obj []Inventory, id int, quantity int) {
+
+	for i := 0; i < len(obj); i++ {
+		if obj[i].Id == id {
+			obj[i].Quantity = quantity
+			fmt.Println("Item updated")
+			return
+		}
+	}
+
+	fmt.Println("Item not found")
+}
+
+func removeItem(obj []Inventory, id int) []Inventory {
+
+	for i := 0; i < len(obj); i++ {
+		if obj[i].Id == id {
+			obj = append(obj[:i], obj[i+1:]...)
+			fmt.Println("Item removed")
+			return obj
+		}
+	}
+
+	fmt.Println("Item not found")
+	return obj
+}
+
+func itemCount(obj []Inventory, result chan float64) {
+
+	total := 0.0
+
+	for i := 0; i < len(obj); i++ {
+		total = total + float64(obj[i].Quantity)*obj[i].Price
+	}
+
+	result <- total
 }
 
 func main() {
+
 	obj := []Inventory{
 		{2, "Macbook Pro", 5, 300000},
 		{3, "Airpods", 5, 20000},
@@ -27,32 +74,28 @@ func main() {
 		{5, "Sunglasses", 5, 20000},
 	}
 
-	a := Inventory{Id: 1, Name: "iPhone 17", Quantity: 5, Price: 100000}
-	obj = append(obj, a)
+	a := Inventory{1, "iPhone 17", 5, 100000}
+	obj = addItem(obj, a)
 
-	b := Inventory{Id: 2, Name: "Macbook Pro", Quantity: 4, Price: 300000}
-	obj = append(obj, b)
+	updateItem(obj, 2, 4)
 
-	fmt.Println(obj)
+	obj = removeItem(obj, 4)
+
+	fmt.Println("\nINVENTORY DETAILS")
+
+	for i := 0; i < len(obj); i++ {
+		fmt.Println(obj[i])
+	}
 
 	n := len(obj)
+	result := make(chan float64)
 
-	item := make(chan int, n)
+	go itemCount(obj, result)
 
-	result := make(chan int, n)
+	total := <-result
 
-	for w := 1; w <= n; w++ {
-		go itemCount(w, item, result)
-	}
-
-	for j := 1; j <= n; j++ {
-		item <- j
-	}
-
-	close(item)
-
-	for a := 1; a <= n; a++ {
-		fmt.Println(<-result)
-	}
+	fmt.Println("\nINVENTORY SUMMARY")
+	fmt.Println("Total Items:", n)
+	fmt.Println("Total Value:", total)
 
 }
